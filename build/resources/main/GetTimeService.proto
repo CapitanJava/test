@@ -1,0 +1,15 @@
+syntax = "proto3";
+package com.grpc.examples;
+option java_package = "com.grpc.examples";
+
+message GetTimeRequest {
+  string action = 1;
+}
+
+message GetTimeResponse {
+  string time = 1;
+}
+
+service GetTimeService {
+  rpc getTime(GetTimeRequest) returns (GetTimeResponse);
+}
